@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#my-elem").click(function(){
+       var counter = parseInt($('.counter').html()) + 1;
+    	$('.counter').html(counter);
+    });
+});
+</script>
+</head>
+<body>
+<div class="w3-display-middle">
+<div > &nbsp &nbsp &nbspWelcome! You have clicked <b class="counter">0</b> times!</div>
+<div id="my-elem" >
+	<img src="11.jpg"  style="width:50%;height:100%" >
+</div>
+
+</div>
+
+</body>
+</html>

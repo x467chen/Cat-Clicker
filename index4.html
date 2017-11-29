@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+    for (i = 0; i < 5; i++) {
+        var $img = $('.my-img');
+        $('#my-elem').append('<div id="' + (i+1) + '" class="my-img">This is picture '+ (i+1) + '<br>You clicked </div>');
+
+        
+        $('#' + (i+1) + '').append('<b class="counter' + (i+1) + '">0</b>');
+
+        var myImage = new Image();
+        myImage.src = 'cat.jpg';
+        $('#' + (i+1) + '').append('<br>');
+        $('#' + (i+1) + '').append(myImage);
+
+    }
+
+function createCallback( i ){
+  return function(){
+    var counter = parseInt($('.counter' + (i) + '').html()) + 1;
+    $('.counter' + (i) + '').html(counter);
+  }
+}
+
+
+  for(var i = 1; i < 6; i++) {
+    $('#' + i).click( createCallback( i ) );
+  }
+
+   
+});
+
+</script>
+</head>
+<body>
+<div id="my-elem" >
+</div>
+
+</body>
+</html>
